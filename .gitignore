@@ -1,0 +1,5 @@
+resources/*tar.gz
+resources/*.gz
+resources/*.tgz
+.vagrant/**/*
+.git/**/*
