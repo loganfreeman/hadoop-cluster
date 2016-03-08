@@ -8,8 +8,8 @@ function installLocalJava {
 }
 
 function installRemoteJava {
-	echo "install open jdk"
-	yum install -y jdk-8u74-linux-i586
+	curl -o /vagrant/resources/$JAVA_ARCHIVE -O -L $HADOOP_MIRROR_DOWNLOAD
+	tar -xzf /vagrant/resources/$JAVA_ARCHIVE -C /usr/local
 }
 
 function setupJava {
