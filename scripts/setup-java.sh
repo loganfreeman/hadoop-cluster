@@ -8,16 +8,14 @@ function installLocalJava {
 }
 
 function installRemoteJava {
-	curl -o /vagrant/resources/$JAVA_ARCHIVE -O -L $HADOOP_MIRROR_DOWNLOAD
+	curl -o /vagrant/resources/$JAVA_ARCHIVE -O -L $JAVA_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$JAVA_ARCHIVE -C /usr/local
 }
 
 function setupJava {
 	echo "setting up java"
 	if resourceExists $JAVA_ARCHIVE; then
-		ln -sf /usr/local/jdk1.8.0_74 /usr/local/java
-	else
-		ln -sf /usr/lib/jvm/jre /usr/local/java
+		ln -sf /usr/local/${JAVA_VERSION} /usr/local/java
 	fi
 }
 
