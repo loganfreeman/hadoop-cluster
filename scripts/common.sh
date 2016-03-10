@@ -1,5 +1,5 @@
 #java
-JAVA_ARCHIVE=jdk-8u73-linux-i586.tar.gz
+JAVA_ARCHIVE=jdk-8u73-linux-i586.gz
 JAVA_VERSION=jdk1.8.0_73
 JAVA_MIRROR_DOWNLOAD=../resources/${JAVA_ARCHIVE}
 #hadoop
@@ -10,7 +10,7 @@ HADOOP_ARCHIVE=${HADOOP_VERSION}.tar.gz
 HADOOP_MIRROR_DOWNLOAD=../resources/${HADOOP_ARCHIVE}
 HADOOP_RES_DIR=/vagrant/resources/hadoop
 #spark
-SPARK_VERSION=spark-1.6.0-bin-hadoop2.4
+SPARK_VERSION=spark-1.6.0-bin-hadoop2.6
 SPARK_ARCHIVE=${SPARK_VERSION}.tgz
 SPARK_MIRROR_DOWNLOAD=../resources/${SPARK_ARCHIVE}
 SPARK_RES_DIR=/vagrant/resources/spark
