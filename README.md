@@ -2,7 +2,7 @@ vagrant-hadoop-spark-cluster
 ============================
 
 # 1. Introduction
-### Vagrant project to spin up a cluster of 4, 32-bit CentOS6.5 Linux virtual machines with Hadoop v2.6.0 and Spark v1.1.1. 
+### Vagrant project to spin up a cluster of 4, 32-bit CentOS6.5 Linux virtual machines with Hadoop v2.6.0 and Spark v1.1.1.
 Ideal for development cluster on a laptop with at least 4GB of memory.
 
 1. node1 : HDFS NameNode + Spark Master
@@ -72,7 +72,7 @@ After you have provisioned the cluster, you need to run some commands to initial
 ```vagrant ssh node-1```
 Commands below require root permissions. Change to root access using ```sudo su``` or create a new user and grant permissions if you want to use a non-root access. In such a case, you'll need to do this on VMs.
 
-Issue the following command. 
+Issue the following command.
 
 1. $HADOOP_PREFIX/bin/hdfs namenode -format myhadoop
 
@@ -99,7 +99,7 @@ yarn jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.
 ## Start Spark in Standalone Mode
 SSH into node1 and issue the following command.
 
-1. $SPARK_HOME/sbin/start-all.sh
+1. sudo su && $SPARK_HOME/sbin/start-all.sh
 
 ### Test Spark on YARN
 You can test if Spark can run on YARN by issuing the following command. Try NOT to run this command on the slave nodes.
@@ -111,7 +111,7 @@ $SPARK_HOME/bin/spark-submit --class org.apache.spark.examples.SparkPi \
     lib/spark-examples*.jar \
     100
 ```
-	
+
 ### Test Spark using Shell
 Start the Spark shell using the following command. Try NOT to run this command on the slave nodes.
 
